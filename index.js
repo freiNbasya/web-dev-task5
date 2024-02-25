@@ -3,7 +3,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('./mongooseConnections');
 const PORT = require('./configs/port');
 const routes = require('./routes');
-
+/*
+There is a visual interface that should help you out.
+    - link: "/" - displays all of the users in the database (GET)
+    - link: "/new" - displays form to add new user (GET)
+    - link: "/deleteUser/:id" - delete user by id (we utilize POST method to get around HTTP forms limitations) (POST)
+    - link: "/updateUser/:id" - displays form to update existing user (GET)
+*/
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));

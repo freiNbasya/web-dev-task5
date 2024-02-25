@@ -1,0 +1,9 @@
+h1(style="font-size: 24px; color: #333;") Update User
+form(action=`/updateUser/${user._id}`, method='post', style="margin-top: 20px;")
+    label(for='name', style="display: block; margin-bottom: 5px;") User Name:
+    input(type='text', id='name', name='name', value=user.name, required, style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;")
+    label(for='lastname', style="display: block; margin-bottom: 5px;") User lastname:
+    input(type='text', id='lastname', name='lastname', value=user.lastname, required, style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;")
+    label(for='email', style="display: block; margin-bottom: 5px;") User email:
+    input(type='email', id='email', name='email', value=user.email, required, style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;")
+    button(type='submit', style="background-color: #28a745; color: #fff; padding: 10px; border: none; cursor: pointer;") Update User

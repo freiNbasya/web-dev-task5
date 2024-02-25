@@ -1,4 +1,10 @@
 h1 Users List
 ul
     each user in list
-        li= user.name + ' ' + user.lastname + ' ' + user.email
+        li
+            span= user.name + ' ' + user.lastname + ' ' + user.email
+            form(action=`/updateUser/${user._id}`, method='get')
+                button(type='submit') Update
+            form(action=`/deleteUser/${user._id}`, method='post')
+                button(type='submit') Delete
+a(href='/new') Create new user
